@@ -12,14 +12,13 @@ var config = {
   ],
   output: {
     filename: 'main.js',
-    publicPath: '/',
     path: pathsConfig.dist
   },
   module: {
     loaders: [
       {
         test: /\.jsx?$/,
-        include: [ path.join(__dirname, pathsConfig.app)],
+        include: [path.join(__dirname, pathsConfig.app)],
         exclude: /(node_modules|bower_components)/,
         loader: pathsConfig.babelPath
       }
