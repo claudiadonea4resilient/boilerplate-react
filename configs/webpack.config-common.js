@@ -6,9 +6,9 @@ console.log("==================");
 
 var config = {
     entry: [
-    'webpack-dev-server/client?http://localhost:8080/', // WebpackDevServer host and port
-    'webpack/hot/dev-server', // "only" prevents reload on syntax errors
-    pathsConfig.entry
+    'webpack-dev-server/client?http://localhost:8080/',
+    'webpack/hot/dev-server',
+     pathsConfig.entry
   ],
   output: {
     filename: 'main.js',
@@ -21,7 +21,7 @@ var config = {
         test: /\.jsx?$/,
         include: [ path.join(__dirname, pathsConfig.app)],
         exclude: /(node_modules|bower_components)/,
-        loader: pathsConfig.babelPath//'babel'
+        loader: pathsConfig.babelPath
       }
     ]
   },

@@ -4,9 +4,9 @@
   "description": "boilerplate for comparing react with angular",
   "main": "index.js",
   "scripts": {
-    "start": "clear && npm run serve | npm run dev",
+    "start": "clear &&  npm run dev | npm run serve ",
     "serve": "webpack -d --watch --config ./webpack.config-dev.js",
-    "dev": "webpack-dev-server --inline --hot",
+    "dev": "webpack-dev-server --inline --config ./webpack.config-dev.js",
     "build": "NODE_ENV=production webpack -p --config ./webpack.config-prod.js"
   },
   "repository": {
@@ -37,7 +37,7 @@
     "jsx-loader": "^0.13.2",
     "react-dom": "^15.3.2",
     "react-hot-loader": "^3.0.0-beta.6",
-    "webpack": "^1.13.2",
+    "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"
   }
 }

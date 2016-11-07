@@ -13,7 +13,7 @@ var publicPaths = (function(){
       app: app,
       entry: app + 'main/js/index.js',
       dist: base + '/dist',
-      babelPath: 'babel?' + JSON.stringify(babelSettings)
+      babelPath: 'babel?' + JSON.stringify(babelSettings)//hack, babel wasn't processing files
     };
 })();
 
