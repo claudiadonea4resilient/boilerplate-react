@@ -3,6 +3,11 @@ var pathsConfig = require('./paths.config');
 var webpack = require('webpack');
 
 // Additional config that is DEVELOPMENT only
+config.entry = [
+  'webpack-dev-server/client?http://localhost:8080/',
+  'webpack/hot/dev-server',
+   pathsConfig.entry
+];
 config.output.publicPath = '/';
 config.devServer = {
   hot: true,
