@@ -1,8 +1,8 @@
-var webpack = require('webpack');
 var path = require('path');
+var webpackValidator = require('webpack-validator');
 var pathsConfig = require('./paths.config');
 
-console.log("==================");
+console.log("======= WEBPACK START ===========\n");
 
 var config = {
     entry: [
@@ -25,20 +25,9 @@ var config = {
       }
     ]
   },
-  plugins: [
-        new webpack.ProvidePlugin({
-            "React": "react",
-        }),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
-  ],
 
   resolve: {
     extensions: ['', '.js', '.jsx']
-  },
-  devServer: {
-    hot: true,
-    contentBase: pathsConfig.base
   }
 };
 
