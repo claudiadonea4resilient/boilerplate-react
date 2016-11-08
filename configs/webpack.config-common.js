@@ -1,5 +1,5 @@
 var path = require('path');
-var webpackValidator = require('webpack-validator');
+//var webpackValidator = require('webpack-validator');
 var pathsConfig = require('./paths.config');
 
 console.log("======= WEBPACK START ===========\n");
@@ -18,7 +18,7 @@ var config = {
     loaders: [
       {
         test: /\.jsx?$/,
-        include: [path.join(__dirname, pathsConfig.app)],
+        include: pathsConfig.app,
         exclude: /(node_modules|bower_components)/,
         loader: pathsConfig.babelPath
       }

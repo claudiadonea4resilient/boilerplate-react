@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "clear &&  npm run dev | npm run serve ",
-    "serve": "webpack -d --watch --config ./webpack.config-dev.js",
-    "dev": "webpack-dev-server --inline --config ./webpack.config-dev.js",
-    "build": "NODE_ENV=production webpack -p --config ./webpack.config-prod.js"
+    "serve": "webpack -d --watch --config ./configs/webpack.config-dev.js",
+    "dev": "webpack-dev-server --inline --config ./configs/webpack.config-dev.js",
+    "build": "NODE_ENV=production webpack -p --config ./configs/webpack.config-prod.js",
+    "show-errors": "clear && webpack --display-error-details"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "react-dom": "^15.3.2",
     "react-hot-loader": "^3.0.0-beta.6",
     "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-server": "^1.16.2",
+    "webpack-validator": "^2.2.9"
   }
 }
