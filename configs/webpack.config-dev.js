@@ -1,6 +1,6 @@
-var config = require('./webpack.config-common');
+// var config = require('./webpack.config-common');
 var pathsConfig = require('./paths.config');
-var webpack = require('webpack');
+//var webpack = require('webpack');
 
 // Additional config that is DEVELOPMENT only
 config.entry = [
@@ -14,13 +14,21 @@ config.devServer = {
   contentBase: pathsConfig.base,
   inline: true
 };
-
-config.plugins = [
-        new webpack.ProvidePlugin({
-            "React": "react",
-        }),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
-];
+config.preloaders = [{
+                test: /\.js$/,
+                loaders: ['jshint'],
+                exclude: /node_modules/
+            }];
+plugins = [
+        // new webpack.ProvidePlugin({
+        //     "React": "react",
+        // }),
+        'karma-jasmine',
+        'karma-babel-preprocessor',
+        'karma-phantomjs-launcher'//,
+//         new webpack.HotModuleReplacementPlugin(),
+//         new webpack.NoErrorsPlugin()
+ ];
+config.plugins = config.plugins.concat(plugins);
 
 module.exports = config;
