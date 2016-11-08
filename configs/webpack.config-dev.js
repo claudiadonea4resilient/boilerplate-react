@@ -9,11 +9,18 @@ config.devServer = {
   contentBase: pathsConfig.base,
   inline: true
 };
-
+config.preloaders = [{
+                test: /\.js$/,
+                loaders: ['jshint'],
+                exclude: /node_modules/
+            }];
 plugins = [
         new webpack.ProvidePlugin({
             "React": "react",
         }),
+        'karma-jasmine',
+        'karma-babel-preprocessor',
+        'karma-phantomjs-launcher',
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
 ];
