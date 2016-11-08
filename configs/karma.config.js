@@ -1,4 +1,4 @@
-var webpackConfig = require('./webpack.config-dev.js');
+//var webpackConfig = require('./webpack.config-dev.js');
 
 module.exports = function(config) {
     config.set({
@@ -8,12 +8,12 @@ module.exports = function(config) {
         ],
         frameworks: ['jasmine'],
         preprocessors: {
-            'test-context.config.js': ['webpack'],
+            'test-context.config.js': ['webpack', 'sourcemap'],
             //'./../**/tests/*.spec.js': ['babel'],
             //'./../**/js/*.js': ['coverage']
         },
         //reporters: ['mocha', 'progress', 'coverage'],
-        webpack: webpackConfig,
+        //webpack: webpackConfig,
         webpackServer: {
             noInfo: true
         },

@@ -1,4 +1,4 @@
-// var config = require('./webpack.config-common');
+var config = require('./webpack.config-common');
 var pathsConfig = require('./paths.config');
 //var webpack = require('webpack');
 
