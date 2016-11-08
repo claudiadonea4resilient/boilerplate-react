@@ -1,6 +1,6 @@
-var config = require('./webpack.config-common');
+// var config = require('./webpack.config-common');
 var pathsConfig = require('./paths.config');
-var webpack = require('webpack');
+//var webpack = require('webpack');
 
 // Additional config that is DEVELOPMENT only
 config.output.publicPath = '/';
@@ -15,15 +15,15 @@ config.preloaders = [{
                 exclude: /node_modules/
             }];
 plugins = [
-        new webpack.ProvidePlugin({
-            "React": "react",
-        }),
+        // new webpack.ProvidePlugin({
+        //     "React": "react",
+        // }),
         'karma-jasmine',
         'karma-babel-preprocessor',
-        'karma-phantomjs-launcher',
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
-];
+        'karma-phantomjs-launcher'//,
+//         new webpack.HotModuleReplacementPlugin(),
+//         new webpack.NoErrorsPlugin()
+ ];
 config.plugins = config.plugins.concat(plugins);
 
 module.exports = config;

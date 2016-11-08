@@ -8,7 +8,7 @@ module.exports = function(config) {
         ],
         frameworks: ['jasmine'],
         preprocessors: {
-            //'test-context.config.js': ['webpack', 'sourcemap'],
+            'test-context.config.js': ['webpack'],
             //'./../**/tests/*.spec.js': ['babel'],
             //'./../**/js/*.js': ['coverage']
         },
