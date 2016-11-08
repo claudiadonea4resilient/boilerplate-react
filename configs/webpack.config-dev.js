@@ -10,12 +10,13 @@ config.devServer = {
   inline: true
 };
 
-config.plugins = [
+plugins = [
         new webpack.ProvidePlugin({
             "React": "react",
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
 ];
+config.plugins = config.plugins.concat(plugins);
 
 module.exports = config;

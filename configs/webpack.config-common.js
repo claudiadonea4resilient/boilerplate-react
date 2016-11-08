@@ -1,4 +1,5 @@
 var path = require('path');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 //var webpackValidator = require('webpack-validator');
 var pathsConfig = require('./paths.config');
 
@@ -21,13 +22,23 @@ var config = {
         include: pathsConfig.app,
         exclude: /(node_modules|bower_components)/,
         loader: pathsConfig.babelPath
-      }
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract(
+          "style",
+          "css!sass")
+       }
     ]
   },
 
   resolve: {
     extensions: ['', '.js', '.jsx']
-  }
+  },
+  plugins: [
+      new ExtractTextPlugin("app.css")
+  ]
+
 };
 
 module.exports = config;

@@ -33,6 +33,7 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-es2015-webpack": "^6.4.3",
     "babel-preset-react": "^6.3.13",
+    "extract-text-webpack-plugin": "^1.0.1",
     "http-server": "^0.9.0",
     "ip": "^1.1.3",
     "jsx-loader": "^0.13.2",
