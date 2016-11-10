@@ -1,6 +1,6 @@
 var config = require('./webpack.config-common');
 var pathsConfig = require('./paths.config');
-//var webpack = require('webpack');
+var webpack = require('webpack');
 
 // Additional config that is DEVELOPMENT only
 config.entry = [
@@ -20,12 +20,12 @@ config.preloaders = [{
                 exclude: /node_modules/
             }];
 plugins = [
-        // new webpack.ProvidePlugin({
-        //     "React": "react",
-        // }),
-        'karma-jasmine',
-        'karma-babel-preprocessor',
-        'karma-phantomjs-launcher'//,
+        new webpack.ProvidePlugin({
+            "React": "react",
+        }),
+        // 'karma-jasmine',
+        // 'karma-babel-preprocessor',
+        // 'karma-phantomjs-launcher'//,
 //         new webpack.HotModuleReplacementPlugin(),
 //         new webpack.NoErrorsPlugin()
  ];

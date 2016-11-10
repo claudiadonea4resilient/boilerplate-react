@@ -14,8 +14,8 @@ var publicPaths = (function(){
     return {
       base: base,
       app: appAbsolute,//app,
-      entry: path.resolve(appAbsolute + '/main/js/index.js'),//app + 'main/js/index.js',
-      dist: base + '/dist',
+      entry: path.resolve(appAbsolute + '/main/index.js'),//app + 'main/js/index.js',
+      dist: baseAbsolute + '/dist',
       babelPath: 'babel?' + JSON.stringify(babelSettings)//hack, babel wasn't processing files
     };
 })();
