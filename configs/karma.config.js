@@ -4,11 +4,11 @@ module.exports = function(config) {
     config.set({
         browsers: ['PhantomJS'],
         files: [
-            { pattern: 'test-context.config.js', watched: false }
+            { pattern: './test-context.config.js', watched: false }
         ],
         frameworks: ['jasmine'],
         preprocessors: {
-            'test-context.config.js': ['webpack', 'sourcemap'],
+            './test-context.config.js': ['webpack', 'sourcemap'],
             //'./../**/tests/*.spec.js': ['babel'],
             //'./../**/js/*.js': ['coverage']
         },

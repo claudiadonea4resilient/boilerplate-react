@@ -31,7 +31,7 @@ var config = {
     extensions: ['', '.js', '.jsx']
   },
   plugins: [
-      new ExtractTextPlugin("app.css")
+      //new ExtractTextPlugin("app.css")
   ]
 
 };
