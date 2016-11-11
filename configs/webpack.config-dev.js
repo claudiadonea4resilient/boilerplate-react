@@ -4,7 +4,7 @@ var webpack = require('webpack');
 
 // Additional config that is DEVELOPMENT only
 config.entry = [
-  'webpack-dev-server/client?http://localhost:8090/',
+  'webpack-dev-server/client?http://localhost:8080/',
   'webpack/hot/dev-server',
    pathsConfig.entry
 ];
@@ -16,19 +16,19 @@ config.devServer = {
 };
 config.preloaders = [{
                 test: /\.js$/,
-                loaders: ['eslint-loader'],
+                loaders: ['jshint'],
                 exclude: /node_modules/
             }];
 plugins = [
         new webpack.ProvidePlugin({
             "React": "react",
         }),
-        'karma-jasmine',
-        'karma-babel-preprocessor',
-       'karma-phantomjs-launcher'//,
+        // 'karma-jasmine',
+        // 'karma-babel-preprocessor',
+        // 'karma-phantomjs-launcher'//,
 //         new webpack.HotModuleReplacementPlugin(),
 //         new webpack.NoErrorsPlugin()
  ];
-//config.plugins = config.plugins.concat(plugins);
+config.plugins = config.plugins.concat(plugins);
 
 module.exports = config;
